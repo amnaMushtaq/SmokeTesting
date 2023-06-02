@@ -132,7 +132,7 @@ from PageObject.FlooringAmericaPage import Navigate_to_Site, submit_form, valida
 #             break
 
 # Run the test case
-
+#TestCases
 Navigate_to_Site("https://www.brunswickfloorsfa.com/")
 submit_form()
 validate_form_in_site_admin()
