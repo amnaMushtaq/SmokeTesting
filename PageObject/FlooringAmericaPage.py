@@ -38,7 +38,7 @@ def submit_form():
         driver.find_element(By.NAME,"LastName").send_keys("CCA Please Ignore")
         driver.find_element(By.NAME,"CleanHomePhone").send_keys("9056428161")
         driver.find_element(By.NAME,"PostalCode").send_keys("99501")
-        driver.find_element(By.NAME,"EmailAddress").send_keys("testleadfa06012023@ccapleaseignore.com")
+        driver.find_element(By.NAME,"EmailAddress").send_keys("testleadfa06022023@ccapleaseignore.com")
         driver.find_element(By.NAME,"OpportunityNotes").send_keys("Test Lead")
         #driver.find_element(By.name,"MainFormCheckBox").get_attribute("checked")
         driver.find_element(By.ID,"contact").click()
@@ -57,7 +57,7 @@ def submit_form():
         sys.exit()
 
 # Function to login to the site admin and validate the submitted form through email
-def validate_form_in_site_admin():
+def validates_form_in_site_admin():
 
     #UserLogin to the SiteAdmin
     # driver.find_element(By.XPATH, "//a[@href='/siteadmin/home']").click()
@@ -66,6 +66,7 @@ def validate_form_in_site_admin():
     # driver.find_element(By.ID,"Email").send_keys("amna.mushtaq@enspireforenterprise.com")
     # driver.find_element(By.ID,"Password").send_keys("All@h!$1INDEED")
     # driver.find_element(By.XPATH,"//input[@type='submit']").click()
+
     driver.find_element(By.XPATH,"//text()[contains(., 'Customer Management')]/following-sibling::a[contains(., 'Edit Now')]").click()
     driver.find_element(By.ID,"users").click()
     driver.find_element(By.XPATH,"//*[@id='users']/option[2]").click()
@@ -107,13 +108,13 @@ def get_Location_Information():
 
 
 # Function to login to Centermark and validate the submitted form through email
-def validate_form_in_centermark(LocNumber,LocName):
+def validates_form_in_centermark(LocNumber,LocName):
 #Centermark
 
-    driver.get("http://live.yodle.com/")
-    driver.find_element(By.ID,"usernameForm").send_keys("amna.mushtaq@enspireforenterprise.com")
-    driver.find_element(By.ID,"password").send_keys("Alhumdul!ll@h#1122")
-    driver.find_element(By.NAME,"submit").click()
+    # driver.get("http://live.yodle.com/")
+    # driver.find_element(By.ID,"usernameForm").send_keys("amna.mushtaq@enspireforenterprise.com")
+    # driver.find_element(By.ID,"password").send_keys("Alhumdul!ll@h#1122")
+    # driver.find_element(By.NAME,"submit").click()
     SearchBox=driver.find_element(By.ID,"filterText")
     SearchBox.send_keys(LocNumber)
     SearchBox.send_keys(Keys.ENTER)
